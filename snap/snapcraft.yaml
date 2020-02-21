@@ -1,4 +1,4 @@
-name: olibox-core
+name: test-python-snap
 base: core18
 version: '0.1dev'
 summary: Python Test Snap
@@ -7,15 +7,16 @@ description: |
 grade: devel
 confinement: strict
 architectures: 
-  - build-on: armhf 
+  - build-on: amd64 
     run-on: armhf
 
 parts:
-  olibox-core:
+  test-python-snap:
     source: .
     plugin: python
+    python-version: python3
     requirements: ['requirements.txt']
 apps:
-  olibox-core:
-    command: olibox-core
-    plugs: [network, network-bind, mount-observe]
+  test-python-snap:
+    command: test-python-snap
+    plugs: [home, network, network-bind, mount-observe]
