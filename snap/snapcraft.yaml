@@ -1,0 +1,21 @@
+name: olibox-core
+base: core18
+version: '0.1dev'
+summary: Python Test Snap
+description: |
+    This is test snap for python applications.
+grade: devel
+confinement: strict
+architectures: 
+  - build-on: armhf 
+    run-on: armhf
+
+parts:
+  olibox-core:
+    source: .
+    plugin: python
+    requirements: ['requirements.txt']
+apps:
+  olibox-core:
+    command: olibox-core
+    plugs: [network, network-bind, mount-observe]
