@@ -6,7 +6,7 @@ from setuptools import setup, find_packages
 with open("README.md", "r") as f:
     README = f.read()
 
-setup(name='olibox-core',
+setup(name='test-python-snap',
       version='0.1dev',
       description='This is a test snap for python applications',
       long_description=README,
@@ -22,7 +22,7 @@ setup(name='olibox-core',
           "Operating System :: OS Independent", ],
       entry_points={
           'console_scripts': [
-              'olibox-core = olibox_core.olibox_core.olibox_core:init'
+              'test-python-snap = olibox_core.olibox_core.olibox_core:init'
           ]
       },
       )
